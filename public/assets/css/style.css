@@ -1,12 +1,17 @@
 li {
   padding: 5px;
-  margin: 5px;
-  background: #faebd7;
+  margin: -10px;
+  background: hsl(34, 78%, 91%);
   width: 250px;
 }
 
 .label {
   font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 10px;
 }
 
 .vertical-center {
@@ -44,8 +49,16 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  padding-bottom: 20px;
+}
+
+p {
+  padding-top: 15px;
+}
+
 .devour-burger {
-  top: -35px;
+  top: -20px;
   height: 30px;
   width: 80px;
   margin-left: 260px;
@@ -53,7 +66,7 @@ h1 {
 }
 
 .remove-burger {
-  top: -35px;
+  top: -20px;
   height: 30px;
   width: 80px;
   margin-left: 260px;
