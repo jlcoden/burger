@@ -2,18 +2,60 @@ li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
+  width: 250px;
 }
 
 .label {
   font-weight: bold;
 }
 
-.create-update-form {
-  padding: 5px;
-  margin: 5px;
-  background: aqua;
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("https://image.freepik.com/free-vector/burger-pattern-background_67556-123.jpg");
+  background-repeat: repeat;
+}
+
+.container {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-color: #ba5e28;
+  border-style: solid;
 }
 
 .form-group {
   margin-bottom: 5px;
+}
+
+body {
+  background-image: url("https://image.freepik.com/free-vector/burger-pattern-background_67556-123.jpg");
+  background-repeat: repeat;
+}
+
+#brg {
+  width: 250px;
+  height: 70px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.devour-burger {
+  top: -35px;
+  height: 30px;
+  width: 80px;
+  margin-left: 260px;
+  position: relative;
+}
+
+.remove-burger {
+  top: -35px;
+  height: 30px;
+  width: 80px;
+  margin-left: 260px;
+  position: relative;
 }
