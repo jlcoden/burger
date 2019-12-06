@@ -17,6 +17,7 @@ $(function() {
         devoured: 0
       };
 
+      // make POST API call to post new burger data
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
@@ -32,9 +33,10 @@ $(function() {
     }
   });
 
+  // when click on devour-burger button
   $(".devour-burger").on("click", function(event) {
     event.preventDefault();
-
+    //take burger data and change to status devoured
     var id = $(this).data("id");
     var devouredState = {
       devoured: 1
@@ -50,6 +52,7 @@ $(function() {
     });
   });
 
+  // when click on remove-burger button, delete burger
   $(".remove-burger").on("click", function(event) {
     var id = $(this).data("id");
 
@@ -58,7 +61,7 @@ $(function() {
       type: "DELETE"
     }).then(function() {
       console.log("deleted burger", id);
-      //       // Reload the page to get the updated list
+      // Reload the page to get the updated list
       location.reload();
     });
   });

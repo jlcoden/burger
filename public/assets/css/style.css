@@ -1,3 +1,4 @@
+/* css styles for list items*/
 li {
   padding: 5px;
   margin: -10px;
@@ -5,15 +6,18 @@ li {
   width: 250px;
 }
 
+/* css styles for .label class */
 .label {
   font-weight: bold;
 }
 
+/* css styles for ul tags  */
 ul {
   list-style-type: none;
   padding-left: 10px;
 }
 
+/* css styles for vertical-center class  */
 .vertical-center {
   min-height: 100%;
   min-height: 100vh;
@@ -23,6 +27,7 @@ ul {
   background-repeat: repeat;
 }
 
+/* css styles for container div class  */
 .container {
   background-color: white;
   padding-top: 20px;
@@ -31,33 +36,40 @@ ul {
   border-style: solid;
 }
 
+/* css styles for form-group class  */
 .form-group {
   margin-bottom: 5px;
 }
 
+/* styles for body tag */
 body {
   background-image: url("https://image.freepik.com/free-vector/burger-pattern-background_67556-123.jpg");
   background-repeat: repeat;
 }
 
+/* styles for burger form item*/
 #brg {
   width: 250px;
   height: 70px;
 }
 
+/* styles for h1 tags*/
 h1 {
   text-align: center;
   padding-bottom: 20px;
 }
 
+/* styles for h2 tags*/
 h2 {
   padding-bottom: 20px;
 }
 
+/* styles for p tags*/
 p {
   padding-top: 15px;
 }
 
+/* styles for devour-burger button*/
 .devour-burger {
   top: -20px;
   height: 30px;
@@ -66,6 +78,7 @@ p {
   position: relative;
 }
 
+/* styles for remove-burger button*/
 .remove-burger {
   top: -20px;
   height: 30px;

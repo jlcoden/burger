@@ -1,60 +1,52 @@
-<body>
+<!-- jumbotron div -->
+<div class="jumbotron vertical-center">
+    <!-- container div -->
+    <div class="container">
+        <h1 class="display-4">Eat-Da-Burger!</h1>
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Burgers to Eat</h2>
+                <!-- unordered list of each burger that has not been devoured -->
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-devoured devoured=false}}
+                    <button type="button" class="devour-burger btn btn-success" id="devourBurger"
+                        data-id="{{this.id}}">Devour</button>
+                    {{/unless}}
+                    {{/each}}
+                </ul>
 
-    <head>
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
-    </head>
-    <div class="jumbotron vertical-center">
-        <div class="container">
-            <h1 class="display-4">Eat-Da-Burger!</h1>
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Burgers to Eat</h2>
-
-                    <ul>
-                        {{#each burgers}}
-                        {{#unless devoured}}
-                        {{> burgers/burger-devoured devoured=false}}
-                        <button type="button" class="devour-burger btn btn-success" id="devourBurger"
-                            data-id="{{this.id}}">Devour</button>
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
-
-                </div>
-                <div class="col-md-6">
-
-                    <h2>Burgers Devoured</h2>
-
-                    <ul>
-                        {{#each burgers}}
-                        {{#if devoured}}
-                        {{> burgers/burger-devoured devoured=true}}
-                        <button type="button" class="remove-burger btn btn-danger" id="removeBurger"
-                            data-id="{{this.id}}" data-newburger="{{devoured}}">Remove</button>
-                        {{/if}}
-                        {{/each}}
-                    </ul>
-
-                </div>
             </div>
+            <div class="col-md-6">
 
-            <div class="col-md-12 text-center">
-                <form class="create-form">
-                    <div class="form-group">
-                        <input type="text" id="brg" name="name">
-                    </div>
-                    <button type="submit" class="btn btn-success" id="addBurger">Submit</button>
-                    <p>Enter a burger you'd like to eat and click on Submit!</p>
-                </form>
+                <h2>Burgers Devoured</h2>
+                <!-- unordered list of each burger that have been devoured -->
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-devoured devoured=true}}
+                    <button type="button" class="remove-burger btn btn-danger" id="removeBurger" data-id="{{this.id}}"
+                        data-newburger="{{devoured}}">Remove</button>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+
             </div>
+            <!-- end of row -->
+        </div>
+        <!-- div column for submitting form -->
+        <div class="col-md-12 text-center">
+            <form class="create-form">
+                <div class="form-group">
+                    <!-- text input field -->
+                    <input type="text" id="brg" name="name">
+                </div>
+                <!-- submit button -->
+                <button type="submit" class="btn btn-success" id="addBurger">Submit</button>
+                <p>Enter a burger you'd like to eat and click on Submit!</p>
+            </form>
         </div>
     </div>
-</body>
+</div>
