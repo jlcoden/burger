@@ -1,5 +1,3 @@
-// Set up MySQL connection.
-var orm = require("./orm.js");
 var mysql = require("mysql");
 var connection;
 
@@ -7,10 +5,10 @@ if (process.env.JAWSB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
-    host: "localhost",
-    port: 3307,
+    //  host: "localhost",
+    //  port: 3307,
     user: "root",
-    password: "IcedMocha4",
+    //  password: "IcedMocha4",
     database: "burgers_db"
   });
 }
